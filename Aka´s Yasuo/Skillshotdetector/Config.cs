@@ -8,6 +8,8 @@ namespace AkaYasuo
 {
     internal static class Configs
     {
+        #region Constants
+        
         public const int EvadingFirstTimeOffset = 250;
 
         public const int EvadingSecondTimeOffset = 80;
@@ -17,7 +19,8 @@ namespace AkaYasuo
         public const int SkillShotsExtraRadius = 9;
 
         public const int SkillShotsExtraRange = 20;
-
+        
+        #endregion
     }
 }
 
