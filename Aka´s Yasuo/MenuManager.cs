@@ -56,12 +56,12 @@ namespace AkaYasuo
             ComboMenu = YMenu.AddSubMenu("Combo", "Combo");
             ComboMenu.AddGroupLabel("Combo");
             ComboMenu.Add("Q", new CheckBox("Use Q"));
-            ComboMenu.Add("EC", new CheckBox("Use E"));
-            ComboMenu.Add("EQ", new CheckBox("Use EQ"));
+            ComboMenu.Add("QStack", new CheckBox Stack Q While Gap ("E Gap Must On"), false);
+            ComboMenu.Add("E", new CheckBox("Use E"));
             ComboMenu.Add("EGap", new CheckBox("Use E Gapcloser"));
-            ComboMenu.Add("EGaps", new Slider("Use E-GapCloser when enemy not in", 300, 1, 475));
+            ComboMenu.Add("EDmg", new CheckBox(Q3 Circle ("Q Must On"));
+            AddSlider(comboMenu, "EGapRange", "-> If Enemy Not In", 300, 1, 475);
             ComboMenu.Add("EGapTower", new CheckBox("Gapclose Tower?", false));
-            ComboMenu.Add("StackQ", new CheckBox("Stack Q while Gapcloser"));
             ComboMenu.Add("R", new CheckBox("Use R"));
             ComboMenu.Add("Ignite", new CheckBox("Use Ignite"));
             ComboMenu.AddGroupLabel("R Combo Settings");
@@ -75,22 +75,22 @@ namespace AkaYasuo
             ComboMenu.Add("R3", new Slider("when x enemy is knocked", 2, 0, 5));
             ComboMenu.AddGroupLabel("Auto R Settings");
             ComboMenu.Add("AutoR", new CheckBox("Use Auto R"));
-            ComboMenu.Add("AutoR2", new Slider("when x enemy is knocked", 3, 0, 5));
+            ComboMenu.Add("AutoR2", new Slider("when x enemy is knocked", 3, 2, 5));
             ComboMenu.Add("AutoR2HP", new Slider("and my HP is >=", 101, 0, 101));
-            ComboMenu.Add("AutoR2Enemies", new Slider("and Enemies in range <=", 2, 0, 5));
+            ComboMenu.Add("AutoR2Enemies", new Slider("and Enemies in range <=", 2, 1, 5));
         }
 
         public static void Harassmenu()
         {
             HarassMenu = YMenu.AddSubMenu("Harass", "Harass");
             HarassMenu.AddGroupLabel("Auto Harass");
-            HarassMenu.Add("AutoQ", new KeyBind("Auto Q Toggle", true, KeyBind.BindTypes.PressToggle, 'T'));
-            HarassMenu.Add("AutoQ3", new CheckBox("Auto Q3"));
-            HarassMenu.Add("QTower", new CheckBox("Auto Q UnderTower"));
-            HarassMenu.AddGroupLabel("Harass");
+            HarassMenu.Add("AutoQ", new KeyBind("Auto Q Toggle", true, KeyBind.BindTypes.PressToggle, 'H'));
+            HarassMenu.Add("AutoQ3", new CheckBox("Auto Q3"), false);
+            HarassMenu.Add("AutoQTower", new CheckBox(" Q UnderTower"), false);
+            HarassMenu.Add("QTower", new CheckBox("UnderTower");
             HarassMenu.Add("Q", new CheckBox("Use Q"));
             HarassMenu.Add("Q3", new CheckBox("Use Q3"));
-            HarassMenu.Add("QLastHit", new CheckBox("Q LastHit?"));
+            HarassMenu.Add("QLastHit", -> new CheckBox("Last Hit Q1/Q2)"));
         }
 
         public static void Fleemenu()
@@ -99,7 +99,7 @@ namespace AkaYasuo
             FleeMenu.AddGroupLabel("Flee");
             FleeMenu.Add("EscQ", new CheckBox("Stack Q"));
             FleeMenu.Add("EscE", new CheckBox("Use E"));
-            FleeMenu.Add("WJ", new KeyBind("Walljump in Flee mode", false, KeyBind.BindTypes.HoldActive, 'G'));
+            FleeMenu.Add("WJ", new KeyBind("Walljump in Flee mode", false, KeyBind.BindTypes.HoldActive, 'E'));
         }
 
         public static void LaneClearmenu()
@@ -126,8 +126,9 @@ namespace AkaYasuo
             LastHitMenu = YMenu.AddSubMenu("LastHit", "LastHit");
             LastHitMenu.AddGroupLabel("LastHit");
             LastHitMenu.Add("Q", new CheckBox("Use Q"));
-            LastHitMenu.Add("Q3", new CheckBox("Use Q3"));
+            LastHitMenu.Add("Q3", new CheckBox("Use Q3") false);
             LastHitMenu.Add("E", new CheckBox("Use E"));
+            LastHitMenu.Add("ETower", new CheckBox("Under Tower") false);
         }
 
         public static void KillStealmenu()
