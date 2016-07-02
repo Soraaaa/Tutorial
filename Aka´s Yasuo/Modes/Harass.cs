@@ -14,7 +14,7 @@ namespace AkaYasuo.Modes
     {
         public static void Harass2()
         {
-            if (MenuManager.HarassMenu["QLastHit"].Cast<CheckBox>().CurrentValue && !Variables.HaveQ3
+            if (MenuManager.HarassMenu["QLastHit"].Cast<CheckBox>().CurrentValue && Q.GetTarget(100) == null && !Variables.HaveQ3
     && !Variables.isDashing)
             {
                 var obj =
