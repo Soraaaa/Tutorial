@@ -84,7 +84,7 @@ namespace AkaYasuo
             HarassMenu = YMenu.AddSubMenu("Harass", "Harass");
             HarassMenu.AddGroupLabel("Auto Harass");
             HarassMenu.Add("AutoQ", new KeyBind("Auto Q Toggle", true, KeyBind.BindTypes.PressToggle, 'T'));
-            HarassMenu.Add("AutoQ3", new CheckBox("Auto Q3"));
+            HarassMenu.Add("AutoQ3", new CheckBox("Use Q3"), false);
             HarassMenu.Add("QTower", new CheckBox("Auto Q UnderTower"));
             HarassMenu.AddGroupLabel("Harass");
             HarassMenu.Add("Q", new CheckBox("Use Q"));
